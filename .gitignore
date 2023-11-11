@@ -1,0 +1,7 @@
+__pycache__
+db.sqlite3
+*.pyc
+settings.json
+pipfile
+pipfile.lock
+.DS_Store
