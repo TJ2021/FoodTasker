@@ -5,6 +5,7 @@ The whole system includes:
 Web Application Dashboard for restaurants to register, create Meals and monitor Orders.
 2. Mobile App for Customers [Swift]
 Customers use this app to browse, place the order and track the order's status in real-time.
+
 3.Mobile App for Couriers [Swift]
 Couriers/Drivers will use this app to pick up the orders from Restaurant and deliver food to the customers.
 
