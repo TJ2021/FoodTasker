@@ -1,0 +1,26 @@
+{% extends "restaurant/base_auth.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block heading %}Restaurant - Register{% endblock%}
+
+{% block content %}
+
+{% comment %}
+enctype specifies how data should be encoded when submitting to the server.
+multipart/form-data needed if the user will upload a file through the form
+{% endcomment %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form user_form%}
+        {% bootstrap_form restaurant_form%}
+    <div class="text-center">
+        <button type="submit" class="btn btn-black">Register a new account</button>
+    </div>
+    </form>
+
+    <div class="text-center my-3">
+        <a href="{% url 'restaurant_sign_up' %}" class="text-decoration-none">Already have an account</a>
+    </div>
+{% endblock  %}

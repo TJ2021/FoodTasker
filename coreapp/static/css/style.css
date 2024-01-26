@@ -1,0 +1,81 @@
+body{
+   font-family: "Varela Round", "Helvetica Neue", "Helvetica", "Arial" sans-serif;
+}
+
+.jumbotron{
+    background-color: white;
+}
+.bg-gradient{
+    background-color: honeydew;
+ }
+ .btn-black{
+    color: white;
+    background-color: black;
+    border-color: black;
+ }
+ .btn-black:hover{
+    color: white;
+    background-color: green;
+    border-color: #1b1c1c;
+ }
+ .mt-5{
+    margin-top: 100px !important;
+ }
+
+ /* Side bar */
+ .sidebar{
+   background-color: rgb(6, 6, 72);
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   padding: 0;
+   overflow: auto;
+ }
+/* Side bar header */
+.sidebar >div:first-child{
+   font-weight: bold;
+   color: white;
+}
+
+.sidebar > div:first-child > h6{
+   color: red;
+}
+/* Side bar list */
+.sidebar .list-group > span{
+   color: white;
+   display: block;
+   text-align: center;
+   margin-top: 20px;
+   padding: 20px 20px;
+   font-size: 16px;
+   font-weight: 300;
+}
+.sidebar .list-group .list-group-item{
+   background-color: transparent;
+   color: #ffffff66;
+   border: 0;
+   text-align: center;
+   padding-left: 30px;
+   padding-right: 30px;
+}
+.sidebar .list-group .list-group-item:focus,
+.sidebar .list-group .list-group-item:hover{
+   background-color:grey;
+   color: white;
+}
+
+
+/* CARD */
+.card-header{
+   padding: 0.75rem 1.25rem;
+   margin-bottom: 0;
+   background-color: #f8f9fc;
+   border-bottom: 1px solid #e3e6f0;
+}
+.card-body{
+   color: #919295;
+}
+.text-black{
+   color: black;
+}

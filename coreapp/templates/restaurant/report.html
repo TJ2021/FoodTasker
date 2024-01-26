@@ -1,0 +1,120 @@
+{% extends "restaurant/base.html" %}
+
+{% block title %}Report{% endblock %}
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="row"> 
+    <div class="col-md-8">
+        <div class="card shadow text-white mb-3 mt-5">
+            <div class="card-header text-center">
+                <h5 class="m-0 font-weight-bold text-black">This week's revenue</h5>  
+            </div>
+            <div class="card-body">
+              <canvas id="revenueChart" height="100"></canvas>
+                <script>
+                    const ctx = document.getElementById('revenueChart');  
+                    new Chart(ctx, {
+                      type: 'bar',
+                      data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                          label: '$ Amount',
+                          data: {{revenue}},
+                          borderWidth: 1
+                        }]
+                      },
+                    });
+                  </script>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow text-white mb-3 mt-5">
+          <div class="card-header text-center">
+              <h5 class="m-0 font-weight-bold text-black">Top 3 Meals</h5>  
+          </div>
+          <div class="card-body">
+            <canvas id="mealsChart" height="100"></canvas>
+              <script>
+                  const ctx2 = document.getElementById('mealsChart');  
+                  new Chart(ctx2, {
+                    type: 'pie',
+                    data: {
+                      labels: {{meal.labels| safe}},
+                      datasets: [{
+                        label: '$ Amount',
+                        data: {{meal.data}},
+                        backgroundColor:[
+                          'rgba(255,99,102)',
+                          'rgba(180,100,88)',
+                          'rgba(150,54,98)',
+                        ],
+                        hoverOffset: 10
+                      }]
+                    },
+                  });
+                </script>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="row"> 
+    <div class="col-md-8">
+        <div class="card shadow text-white mb-3 mt-5">
+            <div class="card-header text-center">
+                <h5 class="m-0 font-weight-bold text-black">Orders by week</h5>  
+            </div>
+            <div class="card-body">
+                <canvas id="ordersChart" height="100"></canvas>
+                <script>
+                    const ctx1 = document.getElementById('ordersChart');
+                    new Chart(ctx1, {
+                      type: 'line',
+                      data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                          label: 'Orders',
+                          data: {{orders}},
+                          borderWidth: 1
+                        }]
+                      },
+                    });
+                  </script>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow text-white mb-3 mt-5">
+        <div class="card-header text-center">
+            <h5 class="m-0 font-weight-bold text-black">Top 3 Drivers</h5>  
+        </div>
+        <div class="card-body">
+          <canvas id="driversChart" height="100"></canvas>
+            <script>
+                const ctx3 = document.getElementById('driversChart');  
+                new Chart(ctx3, {
+                  type: 'pie',
+                  data: {
+                    labels: {{driver.labels| safe}},
+                    datasets: [{
+                      label: '$ Amount',
+                      data: {{driver.data}},
+                      backgroundColor:[
+                        'rgba(185,120,120)',
+                        'rgba(280,120,88)',
+                        'rgba(160,80,98)',
+                      ],
+                      hoverOffset: 10
+                    }]
+                  },
+                });
+              </script>
+        </div>
+    </div>    
+    </div>
+</div>
+{% endblock %}

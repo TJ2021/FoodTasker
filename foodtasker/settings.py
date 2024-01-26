@@ -31,6 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # My apps
+    'coreapp',
+
+    # Third party apps
+    'cloudinary',
+    "django_bootstrap5",
+    'rest_framework',
+    'oauth2_provider',
+    'social_django',
+    'rest_framework_social_oauth2',
+
+    # Default app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,6 +74,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -121,3 +135,31 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+          
+cloudinary.config( 
+  cloud_name = "dmyvdebdp", 
+  api_key = "639532185926686", 
+  api_secret = "hFmB5nIh5yCPNyxbTOCaaOFTMCk" 
+)
+
+AUTHENTICATION_BACKENDS = (
+   'social_core.backends.facebook.FacebookOAuth2',
+   'django.contrib.auth.backends.ModelBackend',
+)
+
+# Facebook configuration
+SOCIAL_AUTH_FACEBOOK_KEY = '668547895162413'
+SOCIAL_AUTH_FACEBOOK_SECRET = '1b70e3b6931ce1a254ff120315da85d1'
+
+# Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from Facebook.
+# Email is not sent by default, to get it, you must request the email permission.
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email, picture.type(large)'
+}
+STRIPE_API_KEY = 'sk_test_51ONaT0IokxG2NNSNjZThAE9GIIIUACM79HRreApmV2WbFgSCIyY5KDpoSMdF42wOSYo1KMgEMZpKklvZqnfjF6qZ00tJdSdr6w'
