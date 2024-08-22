@@ -8,6 +8,7 @@ django = "*"
 cloudinary = "*"
 django_bootstrap5 = "*"
 djangorestframework = "*"
+django-oauth-toolkit = "*"
 
 [dev-packages]
 
