@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 cloudinary = "*"
 django_bootstrap5 = "*"
-rest_framework = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
