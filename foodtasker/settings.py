@@ -96,11 +96,22 @@ WSGI_APPLICATION = 'foodtasker.wsgi.application'
 #       'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 #}
-import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'd54rvuo2pbn7u',                     
+        'USER': 'uds9icsvl7c684',
+        'PASSWORD': 'p5fc404e99be0215f666140d01d7b69a4c9170e9947d5e3274bfbb211636f66fc',
+        'HOST': 'c3nv2ev86aje4j.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',                     
+    }
 }
+# import dj_database_url
+
+#DATABASES = {
+#    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+#}
 
 
 # Password validation
