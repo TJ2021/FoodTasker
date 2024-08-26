@@ -1,3 +1,6 @@
+# Food Tasker (Food Delivery Application)
+## About The Project
+
 This is a food delivery application similar to UberEats, DoorDash etc. It is a comprehensive full-stack project, where a mobile application seamlessly collaborates with a web application for a unified user experience.
 
 The whole system includes:
