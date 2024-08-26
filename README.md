@@ -1,7 +1,6 @@
 # Food Tasker (Food Delivery Application)
 ## About The Project
-
-This is a food delivery application similar to UberEats, DoorDash etc. It is a comprehensive full-stack project, where a mobile application seamlessly collaborates with a web application for a unified user experience.
+This Food Delivery Application is a multi-user platform designed to streamline the process of ordering, delivering, and managing food services for restaurants, customers, and couriers. It provides a comprehensive solution for food delivery, incorporating features like real-time order tracking, secure payment processing, and efficient delivery management. The backend, developed using Python/Django, ensures robust and secure data handling, while the mobile apps, built with Swift, offer a user-friendly interface for customers and couriers. The integration of Stripe for payments and Google Maps for location services further enhances the application's functionality, making it a complete solution for modern food delivery services.
 
 The whole system includes:
 1. **Web App for Restaurants [Python]** <br>
