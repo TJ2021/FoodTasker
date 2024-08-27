@@ -33,6 +33,12 @@ Couriers/Drivers will use this app to pick up the orders from Restaurant and del
 - OAuth
 
 ## Lessons Learned
-- This project was a great hands-on experience, allowing me to apply and deepen my knowledge in Python, Django, and Swift, while also learning new skills in real-time data handling and payment integration.
+- Deepened my understanding of client-server interactions, particularly in managing data flow and communication between the backend (Python/Django) and the frontend (Swift mobile apps).
+- Enhanced my skills in integrating and securing payment gateways, through Stripe
+- Improved my ability to work with external APIs by integrating Google Maps for delivery tracking and geolocation services, handling location data effectively within the app.
+- Developed skills in designing and implementing REST APIs, enabling seamless communication between the mobile apps and the backend, and ensuring data consistency across the platform.
+- Built skills in creating data visualizations and generating reports using tools like bar and pie charts, providing insights into order trends.
+
+
 
 
