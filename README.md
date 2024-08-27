@@ -34,7 +34,7 @@ Couriers/Drivers will use this app to pick up the orders from Restaurant and del
 
 ## Lessons Learned
 - Deepened my understanding of client-server interactions, particularly in managing data flow and communication between the backend (Python/Django) and the frontend (Swift mobile apps).
-- Enhanced my skills in integrating and securing payment gateways, through Stripe
+- Enhanced my skills in integrating and securing payment gateways through Stripe.
 - Improved my ability to work with external APIs by integrating Google Maps for delivery tracking and geolocation services, handling location data effectively within the app.
 - Developed skills in designing and implementing REST APIs, enabling seamless communication between the mobile apps and the backend, and ensuring data consistency across the platform.
 - Built skills in creating data visualizations and generating reports using tools like bar and pie charts, providing insights into order trends.
