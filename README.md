@@ -32,4 +32,7 @@ Couriers/Drivers will use this app to pick up the orders from Restaurant and del
 - Stripe
 - OAuth
 
+## Lessons Learned
+- This project was a great hands-on experience, allowing me to apply and deepen my knowledge in Python, Django, and Swift, while also learning new skills in real-time data handling and payment integration.
+
 
